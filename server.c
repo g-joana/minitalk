@@ -13,7 +13,7 @@ void	handle_bit(int signal)
 	}
 	else if (signal == SIGUSR2)
 	{
-		byte = byte | (0 << count--);
+		count--;
 	}
 	if (count == -1)
 	{

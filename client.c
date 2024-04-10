@@ -1,6 +1,5 @@
 #include <unistd.h>
 #include <signal.h>
-#include <stdio.h>
 #include "libft/libft.h"
 
 void	sendkill(int pid, char *s)
@@ -15,10 +14,8 @@ void	sendkill(int pid, char *s)
 		{
 			if (s[i] & (1 << b))
 				kill(pid, SIGUSR1);
-			// printf("1");
 			else
 				kill(pid, SIGUSR2);
-			// printf("0");
 			b--;
 			usleep(200);
 		}
